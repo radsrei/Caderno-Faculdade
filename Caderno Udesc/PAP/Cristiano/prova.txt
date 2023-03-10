@@ -1,0 +1,11 @@
+class foo:
+    x,y
+
+    def getValue(self):
+
+    def warnTooHigh(self):
+
+    def gatherSum(self):
+        self.getValue()
+        self.warnTooHigh()
+        return x + y

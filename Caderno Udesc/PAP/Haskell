@@ -1,0 +1,34 @@
+type nome  = string
+type linguagem = string
+
+data pessoa = Programador nome linguagem | Aluno Nome Universidade Curso deriving Show
+
+ehAluno :: Pessoa -> Bool
+ehAluno (Aluno __) = True
+ehAluno _ = False
+
+ehProgramador :: Pessoa -> Bool//retorna um booleano
+ehProgramador (Programador __) = True
+ehProgramador - = False
+
+nome :: Pessoa -> String
+nome (Programador nome _) = nome
+nome (Aluno nome _) = nome
+
+
+
+
+data Pet = cat string | dog string
+
+
+speak :: pet->string// recebe o elemento e retorna uma string
+speak (cat_) = 'Miau'
+speak (dog_) = 'Au'
+
+
+petNome :: pet-> string
+petNome (cat n) = n
+petNome (dog n) = n
+
+
+_ variavel anonima...
