@@ -1,0 +1,52 @@
+*Criar banco de dados*
+
+Create database hardware; 
+
+create table componente( 
+cod_comp int primary key auto_increment, 
+nome_comp varchar(30), 
+desc_comp varchar(30)); 
+
+
+INSERT INTO componente (nome_comp, desc_comp) VALUES  
+
+('Componente 1', 'Descrição 1'),  
+('Componente 2', 'Descrição 2'),  
+('Componente 3', 'Descrição 3'),  
+('Componente 4', 'Descrição 4'),  
+('Componente 5', 'Descrição 5'),  
+('Componente 6', 'Descrição 6'),  
+('Componente 7', 'Descrição 7'),  
+('Componente 8', 'Descrição 8'),  
+('Componente 9', 'Descrição 9'),  
+('Componente 10', 'Descrição 10'); 
+
+
+###
+GET http://localhost:8000/hardware HTTP/1.1
+Content-Type: application/json
+
+###
+INSERT
+GET http://localhost:8000/insert/nome/desc HTTP/1.1
+Content-Type: application/json
+
+###
+UPDATE
+GET http://localhost:8000/update/cod/nome/desc HTTP/1.1
+Content-Type: application/json
+
+###
+DELETE
+GET http://localhost:8000/delete/cod HTTP/1.1
+Content-Type: application/json
+
+###
+CONSULTA
+GET http://localhost:8000/find/nome HTTP/1.1
+Content-Type: application/json
+
+###
+TESTE
+GET http://localhost:8000/teste HTTP/1.1
+Content-Type: application/json

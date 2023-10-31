@@ -1,0 +1,19 @@
+{
+  "name": "crudapi",
+  "version": "1.0.0",
+  "main": "pross.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node pross.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mysql2": "^3.6.2",
+    "node": "^21.1.0"
+  },
+  "description": ""
+}
