@@ -1,0 +1,49 @@
+-- Database: `test`
+--
+
+-- --------------------------------------------------------
+
+
+CREATE TABLE `turma` (
+  `id_turma` int(11) NOT NULL,
+  `nome_turma` varchar(100) NOT NULL,
+  `turno_turma` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+ALTER TABLE `turma`
+  ADD PRIMARY KEY (`id_turma`);
+COMMIT;
+
+
+
+CREATE TABLE `professor` (
+  `matr_professor` int(11) NOT NULL,
+  `nome_professor` varchar(200) DEFAULT NULL,
+  `email_professor` varchar(100) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+ALTER TABLE `professor`
+  ADD PRIMARY KEY (`matr_professor`);
+
+
+CREATE TABLE `curso` (
+  `id_curso` int(11) NOT NULL,
+  `nome_curso` varchar(100) NOT NULL,
+  `id_turma` int(11) NOT NULL,
+  `matr_professor` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+ALTER TABLE `curso`
+  ADD PRIMARY KEY (`id_curso`),
+  ADD KEY `id_turma` (`id_turma`),
+  ADD KEY `matr_professor` (`matr_professor`);
+
+
+ALTER TABLE `curso`
+  ADD CONSTRAINT `curso_ibfk_1` FOREIGN KEY (`id_turma`) REFERENCES `turma` (`id_turma`),
+  ADD CONSTRAINT `curso_ibfk_2` FOREIGN KEY (`matr_professor`) REFERENCES `professor` (`matr_professor`);
+
+--
+--
