@@ -1,0 +1,8 @@
+Na extenção buscar o REST Client
+
+Baixar os NPM :
+
+body-parser
+dotenv-safe
+jsonwebtoken
+express
